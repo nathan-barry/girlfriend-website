@@ -1,0 +1,61 @@
+/* General styling */
+a {
+    color: #749c5f;
+}
+
+html {
+    font-size: xx-large;
+}
+
+.blinking-text {
+    /* animation, animation-duration, animation-timing-function, animation-fill-mode */
+    animation: typing 2s steps(30, end) forwards,
+               blinking-cursor 1s infinite;
+    border-right: 2px solid;
+    max-width: fit-content;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@keyframes typing {
+    /* based on https://blog.hubspot.com/website/typing-animation-css */
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blinking-cursor {
+    0% {border-right-color: transparent}
+    50% {border-right-color: black}
+    100% {border-right-color: transparent}
+}
+
+
+/* Main page */
+.special-green {
+    color: #749c5f;
+    /* color for dark mode: #48782e; */
+    font-weight: bold;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    html {
+        font-size: x-large; /* Smaller text on smaller screens */
+    }
+
+    img {
+        width: 100%; /* Make images responsive */
+        height: auto; /* Maintain aspect ratio */
+        max-width: 400px; /* Limit maximum size to fit mobile devices */
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: large; /* Even smaller text for very small screens */
+    }
+
+    section div {
+        padding: 0 10px; /* Add padding to keep text from the edges */
+    }
+}
