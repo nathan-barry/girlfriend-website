@@ -77,5 +77,13 @@ function update() {
     requestAnimationFrame(update);
 }
 
+function resetGrid() {
+    grid = createGrid();
+}
+
+// Initial draw and update
 drawGrid();
 update();
+
+// Reinitialize grid every 5 seconds
+setInterval(resetGrid, 5000);
