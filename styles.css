@@ -15,7 +15,7 @@ p {
     line-height: 1.6;
     margin-bottom: 1em;
     color: #555;
-    text-align: left;
+    text-align: justify;
 }
 
 a {
@@ -37,6 +37,10 @@ a:hover {
     padding: 2em;
     max-width: 800px;
     box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction:column;
 }
 
 
@@ -87,7 +91,12 @@ a:hover {
     section div {
         padding: 0 10px; /* Add padding to keep text from the edges */
     }
+
+    .container { 
+        padding: 1em;
+    }
 }
+
 
 
 /* Game of Life */
