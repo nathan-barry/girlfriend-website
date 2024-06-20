@@ -74,7 +74,7 @@ function countAliveNeighbours(grid, x, y) {
 function update() {
     grid = getNextGeneration(grid);
     drawGrid();
-    requestAnimationFrame(update);
+    setTimeout(update, 50);
 }
 
 function resetGrid() {
@@ -86,4 +86,4 @@ drawGrid();
 update();
 
 // Reinitialize grid every 5 seconds
-setInterval(resetGrid, 5000);
+setInterval(resetGrid, 7000);
