@@ -102,6 +102,6 @@ a:hover {
 
 /* Game of Life */
 #gameCanvas {
-    border: 1px solid #48782e;
+    border: 1px solid black;
     box-sizing: border-box;
 }
