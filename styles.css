@@ -1,12 +1,47 @@
 /* General styling */
+html {
+    font-size: x-large;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: #333;
+    text-align: left;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 1em;
+    color: #555;
+    text-align: left;
+}
+
 a {
     color: #749c5f;
+    transition: color 0.3s;
 }
 
-html {
-    font-size: xx-large;
+a:hover {
+    color: #48782e;
 }
 
+.special-green {
+    color: #749c5f;
+    font-weight: bold;
+}
+
+.container {
+    margin: 2em auto;
+    padding: 2em;
+    max-width: 800px;
+    box-sizing: border-box;
+}
+
+
+
+/* Blinking text animation */
 .blinking-text {
     /* animation, animation-duration, animation-timing-function, animation-fill-mode */
     animation: typing 2s steps(30, end) forwards,
@@ -30,17 +65,11 @@ html {
 }
 
 
-/* Main page */
-.special-green {
-    color: #749c5f;
-    /* color for dark mode: #48782e; */
-    font-weight: bold;
-}
 
 /* Responsive styling */
 @media (max-width: 768px) {
     html {
-        font-size: x-large; /* Smaller text on smaller screens */
+        font-size: large; /* Smaller text on smaller screens */
     }
 
     img {
@@ -52,10 +81,17 @@ html {
 
 @media (max-width: 480px) {
     html {
-        font-size: large; /* Even smaller text for very small screens */
+        font-size: medium; /* Even smaller text for very small screens */
     }
 
     section div {
         padding: 0 10px; /* Add padding to keep text from the edges */
     }
+}
+
+
+/* Game of Life */
+#gameCanvas {
+    border: 1px solid #48782e;
+    box-sizing: border-box;
 }
